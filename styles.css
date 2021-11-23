@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: hsl(217, 54%, 11%);
+    color: hsl(215, 51%, 70%);
+    padding-top: 32px;
+    font-size: 18px;
+}
+
+.card {
+    background-color: hsl(216, 50%, 16%);
+    box-shadow: 0px 33px 8px 20px rgb(7 17 31 / 45%);
+    border-radius: 16px;
+    padding: 24px;
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card__image--container {
+    cursor: pointer;
+    position: relative;
+}
+
+.card__image--container:hover .overlay {
+    opacity: 0.6;
+}
+
+.card__image--container:hover svg {
+    opacity: 1;
+}
+
+.card__image {
+    width: 300px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 99%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: hsl(178, 100%, 50%);
+    border-radius: 8px;
+}
+
+.card__image--container svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+}
+
+.card__title {
+    color: white;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    font-weight: 600;
+    text-align: left;
+}
+
+.card__title:hover,
+.card__title:active {
+    color: hsl(178, 100%, 50%);
+}
+
+.card__description {
+    font-weight: 300;
+    text-align: left;
+}
+
+.card__value {
+    display: inline-block;
+    position: relative;
+    right: 15%;
+}
+
+.card__value svg {
+    fill: hsl(178, 100%, 50%);
+    vertical-align: middle;
+}
+
+.card__value p {
+    display: inline-block;
+    color: hsl(178, 100%, 50%);
+    vertical-align: middle;
+}
+
+.card__expiration {
+    display: inline-block;
+    position: relative;
+    left: 15%;
+}
+
+.card__expiration svg {
+    vertical-align: middle;
+}
+
+.card__expiration p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.line {
+    width: 95%;
+    height: 1px;
+    background-color: hsl(215, 32%, 27%);
+    display: inline-block;
+}
+
+.card__footer {
+    text-align: left;
+}
+
+.card__footer img {
+    width: 45px;
+    border: 1.5px solid white;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.card__footer p {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 12px;
+}
+
+.card__footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.card__footer a:hover,
+.card__footer a:active {
+    color: hsl(178, 100%, 50%);
+}
+
+/*----------------------------------*/
+.attribution { 
+    font-size: 16px; 
+    text-align: center; 
+    margin-top: 66px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+
+.attribution a:hover,
+.attribution a:active {
+    color: #ff1b68;
+}
