@@ -6,36 +6,48 @@ body {
     font-family: 'Outfit', sans-serif;
     background-color: hsl(217, 54%, 11%);
     color: hsl(215, 51%, 70%);
-    padding-top: 32px;
     font-size: 18px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
-.card {
+main .sr-only {
+    display: none;
+}
+
+.nft-card {
     background-color: hsl(216, 50%, 16%);
-    box-shadow: 0px 33px 8px 20px rgb(7 17 31 / 45%);
+    box-shadow: 0px 23px 0px 16px #0c1729, 0px 16px 0px 32px #0c192c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 600px;
     border-radius: 16px;
     padding: 24px;
-    width: 350px;
-    margin: 0 auto;
-    text-align: center;
 }
 
-.card__image--container {
+.nft-card__image-container {
     cursor: pointer;
     position: relative;
 }
 
-.card__image--container:hover .overlay {
+.nft-card__image-container:hover .overlay {
     opacity: 0.6;
 }
 
-.card__image--container:hover svg {
+.nft-card__image-container:hover svg {
     opacity: 1;
 }
 
-.card__image {
-    width: 300px;
-    border-radius: 8px;
+.nft-card__image {
+    width: 304px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -47,12 +59,12 @@ body {
     right: 0;
     height: 99%;
     opacity: 0;
-    transition: .5s ease;
+    transition: .3s ease;
     background-color: hsl(178, 100%, 50%);
     border-radius: 8px;
 }
 
-.card__image--container svg {
+.nft-card__image-container svg {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -63,98 +75,101 @@ body {
     opacity: 0;
 }
 
-.card__title {
+.card__title-text {
     color: white;
     cursor: pointer;
     transition: color 0.2s ease;
     font-weight: 600;
+    font-size: 1.375rem;
     text-align: left;
+    margin-top: 20px;
+    margin-bottom: 16px;
 }
 
-.card__title:hover,
-.card__title:active {
+.card__title-text:hover,
+.card__title-text:active {
     color: hsl(178, 100%, 50%);
 }
 
-.card__description {
+.card__body-text {
     font-weight: 300;
     text-align: left;
+    margin: 0;
 }
 
-.card__value {
-    display: inline-block;
-    position: relative;
-    right: 15%;
+.nft-card__status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 8px;
 }
 
-.card__value svg {
+.nft-card__status div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+}
+
+.nft-card__value svg {
     fill: hsl(178, 100%, 50%);
-    vertical-align: middle;
 }
 
-.card__value p {
-    display: inline-block;
+.nft-card__value p {
     color: hsl(178, 100%, 50%);
-    vertical-align: middle;
-}
-
-.card__expiration {
-    display: inline-block;
-    position: relative;
-    left: 15%;
-}
-
-.card__expiration svg {
-    vertical-align: middle;
-}
-
-.card__expiration p {
-    display: inline-block;
-    vertical-align: middle;
+    font-weight: 700;
 }
 
 .line {
-    width: 95%;
+    width: 100%;
     height: 1px;
     background-color: hsl(215, 32%, 27%);
-    display: inline-block;
+    margin-top: 0.5rem;
 }
 
-.card__footer {
-    text-align: left;
+.nft-card__footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 6px;
+    gap: 1rem;
 }
 
-.card__footer img {
-    width: 45px;
-    border: 1.5px solid white;
+.nft-card__footer img {
+    width: 33px;
+    border: 1.6px solid white;
     border-radius: 50%;
-    vertical-align: middle;
-    margin-left: 8px;
 }
 
-.card__footer p {
+.nft-card__footer p {
     display: inline-block;
-    vertical-align: middle;
-    margin-left: 12px;
+    font-weight: 300;
 }
 
-.card__footer a {
+.nft-card__footer a {
     color: white;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
-.card__footer a:hover,
-.card__footer a:active {
+.nft-card__footer a:hover,
+.nft-card__footer a:active {
     color: hsl(178, 100%, 50%);
 }
 
-/*----------------------------------*/
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
 .attribution { 
     font-size: 16px; 
     text-align: center; 
-    margin-top: 66px;
 }
+
 .attribution a { 
     color: hsl(228, 45%, 44%); 
     text-decoration: none;
